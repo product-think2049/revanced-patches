@@ -96,7 +96,7 @@ Lets start with understanding, how a patch is structured. A patch is mainly buil
    }
    ```
 
-   If the patch extends off `ResourcePatch`, it is able to **patch resources** such as `XML`, `PNG` or similar files. On the other hand, if the patche extends off `BytecodePatch`, it is able to **patch the bytecode** of an app. If a patch needs access to the resources and the bytecode at the same time. Either can use the other as a dependency. **Circular dependencies are unhandled.**
+   If a patch extends off `ResourcePatch`, it is able to **patch resources** such as `XML`, `PNG` or similar files. On the other hand, if a patch extends off `BytecodePatch`, it is able to **patch the bytecode** of an app. If a patch needs access to the resources and the bytecode at the same time. Either can use the other as a dependency. **Circular dependencies are unhandled.**
 
 3. 🏁 The `execute` method
 
