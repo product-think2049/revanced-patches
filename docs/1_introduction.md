@@ -33,6 +33,8 @@ patcher.executePatches().forEach { (patch, result) ->
     println("$patch $log")
 }
 
+// Save the result containing the patched files
+
 val result = patcher.save()
 ```
 
