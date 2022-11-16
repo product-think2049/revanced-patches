@@ -24,7 +24,7 @@ object LoadAdsFingerprint : MethodFingerprint(
 
 ## 🆗 Understanding the example fingerprint
 
-The example fingerprint called `LoadAdsFingerprint` which extends on [`MethodFingerprint`](https://github.com/revanced/revanced-patcher/blob/d2f91a8545567429d64a1bcad6ca1dab62ec95bf/src/main/kotlin/app/revanced/patcher/fingerprint/method/impl/MethodFingerprint.kt#L28) is made to uniquely identify a certain method by capturing various attributes of the method such as the return type, access flags, an opcode pattern and more. The following code can be inferred just from the fingerprint:
+The example fingerprint called `LoadAdsFingerprint` which extends on [`MethodFingerprint`](https://github.com/revanced/revanced-patcher/blob/d2f91a8545567429d64a1bcad6ca1dab62ec95bf/src/main/kotlin/app/revanced/patcher/fingerprint/method/impl/MethodFingerprint.kt#L28) is made to uniquely identify a certain method by capturing various properties of the method such as the return type, access flags, an opcode pattern and more. The following code can be inferred just from the fingerprint:
 
 ```kt
     package com.some.app.ads
@@ -46,7 +46,7 @@ The example fingerprint called `LoadAdsFingerprint` which extends on [`MethodFin
 
 ## 🚀 How it works
 
-Each attribute of the fingerprint is responsible to describe a specific but distinct part of the method. The combination out of those should be and ideally remain unique to all methods in all classes. In the case of the example fingerprint, the `customFingerprint` attribute is responsible to find the class the method is defined in. This greatly increases the uniqueness of the fingerprint, because now the possible methods reduce down to that class. Adding the signature of the method and a string the method implementation refers to in combination now creates a unique fingerprint in the current example:
+Each property of the fingerprint is responsible to describe a specific but distinct part of the method. The combination out of those should be and ideally remain unique to all methods in all classes. In the case of the example fingerprint, the `customFingerprint` property is responsible to find the class the method is defined in. This greatly increases the uniqueness of the fingerprint, because now the possible methods reduce down to that class. Adding the signature of the method and a string the method implementation refers to in combination now creates a unique fingerprint in the current example:
 
 - Package & class (Line 4)
 
