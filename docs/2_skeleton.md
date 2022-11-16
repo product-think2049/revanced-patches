@@ -142,7 +142,7 @@ Lets start with understanding, how a patch is structured. A patch is mainly buil
 
 > **Note**: Details of this implementation and what exactly `Fingerprints` are will be introduced properly on another page.
 
-## 🤏 Minimal template for a bytecode patch
+## 🤏 Minimal boilerplate for a bytecode patch
 
 ```kt
 package app.revanced.patches.examples.minimal.patch
